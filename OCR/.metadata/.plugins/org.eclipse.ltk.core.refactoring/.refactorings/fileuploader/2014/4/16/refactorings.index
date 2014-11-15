@@ -1,0 +1,6 @@
+1397456066764	Extract local variable 'tomcatHome'
+1397456082484	Rename local variable 'tomcatHome'
+1397458787393	Extract method 'readProxies'
+1397787260902	Move compilation unit
+1397840188738	Extract method 'extractAccount'
+1397850067884	Extract method 'cacheAccount'

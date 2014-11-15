@@ -1,0 +1,28 @@
+{
+  "C:\\devtool\\java\\jre6\\lib\\rt.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "C:\\devtool\\java\\jre6\\lib\\rt.jar",
+    "status": "RESOLVED",
+    "error": "No class path info available for \u0027C:\\devtool\\java\\jre6\\lib\\rt.jar\u0027. Skipped."
+  },
+  "C:\\work\\research\\OCR\\fileuploader\\src\\lib-no-dist\\servlet-api.jar": {
+    "location": "C:\\work\\research\\OCR\\fileuploader\\src\\lib-no-dist\\servlet-api.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\work\\research\\OCR\\fileuploader\\src\\lib-no-dist\\servlet-api.jar\u0027. Neither fingerprint \u00271414ae8fe774df0cb217928b6634ee936f134c91\u0027 nor symbolic name \u0027servlet-api\u0027 are known."
+  },
+  "C:\\work\\research\\OCR\\fileuploader\\src\\java": {
+    "location": "C:\\work\\research\\OCR\\fileuploader\\src\\java",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\work\\research\\OCR\\fileuploader\\src\\java\u0027. Skipped."
+  },
+  "C:\\work\\research\\OCR\\fileuploader\\src\\lib\\commons-lang-2.3.jar": {
+    "location": "C:\\work\\research\\OCR\\fileuploader\\src\\lib\\commons-lang-2.3.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\work\\research\\OCR\\fileuploader\\src\\lib\\commons-lang-2.3.jar\u0027. Neither fingerprint \u00270eecdac8c86bc84b4bdfc24371ba8c785a1fc552\u0027 nor symbolic name \u0027commons-lang-2.3\u0027 are known."
+  },
+  "C:\\work\\research\\OCR\\fileuploader\\src\\lib\\commons-io.jar": {
+    "location": "C:\\work\\research\\OCR\\fileuploader\\src\\lib\\commons-io.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\work\\research\\OCR\\fileuploader\\src\\lib\\commons-io.jar\u0027. Neither fingerprint \u0027b90b6ac57cf27a2858eaa490d02ba7945d18ca7b\u0027 nor symbolic name \u0027commons-io\u0027 are known."
+  }
+}

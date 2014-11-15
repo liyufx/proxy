@@ -1,0 +1,21 @@
+INDEX VERSION 1.126+C:\work\research\OCR\.metadata\.plugins\org.eclipse.jdt.core
+3910005969.index
+217480503.index
+2173959173.index
+424679617.index
+512825457.index
+985123308.index
+3488557269.index
+1815365747.index
+1820437632.index
+1114450790.index
+1461241828.index
+2998287580.index
+3432107281.index
+2882835778.index
+2686169954.index
+4098911656.index
+3571893490.index
+2070343456.index
+797422642.index
+2309073736.index

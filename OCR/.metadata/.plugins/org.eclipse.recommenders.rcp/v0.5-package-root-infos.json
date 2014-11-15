@@ -1,0 +1,236 @@
+[
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "2357317d1e1f14937b3bda942c58791ee1dba581",
+    "jarFileModificationDate": "2012-10-05T10:45:32.265-04:00",
+    "location": "C:\\devtool\\java\\jre6\\lib\\ext\\sunjce_provider.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "70e3f9e76e3d5884415516c0cee0855295bcb571",
+    "jarFileModificationDate": "2012-10-05T10:45:32.279-04:00",
+    "location": "C:\\devtool\\java\\jre6\\lib\\jce.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "net.sf.ghost4j",
+    "version": {
+      "major": 0,
+      "minor": 3,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a152b723b3d51641f0b0179a47463404da7f1fce",
+    "jarFileModificationDate": "2014-03-08T21:21:22.241-05:00",
+    "location": "C:\\work\\research\\OCR\\OcrTest\\lib\\ghost4j-0.3.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "com.sun.jna",
+    "version": {
+      "major": 4,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "9b3a11c613ec3fd3440af4103b12c3de82d38b6e",
+    "jarFileModificationDate": "2014-03-08T21:21:24.105-05:00",
+    "location": "C:\\work\\research\\OCR\\OcrTest\\lib\\jna.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "tess4j",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "63c98024b7f642ad8b51955992127516b663d3f8",
+    "jarFileModificationDate": "2014-03-08T21:21:39.232-05:00",
+    "location": "C:\\work\\research\\OCR\\OcrTest\\lib\\tess4j.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.apache.commons.fileupload",
+    "version": {
+      "major": 1,
+      "minor": 2,
+      "micro": 2,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "1e48256a2341047e7d729217adeec8217f6e3a1a",
+    "jarFileModificationDate": "2011-12-14T16:27:26-05:00",
+    "location": "C:\\work\\research\\OCR\\fileuploader\\src\\lib\\commons-fileupload-1.2.2.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jai_imageio",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "27d867283f9043b05a8fb210773d0ef72b767a58",
+    "jarFileModificationDate": "2014-03-08T21:21:23.299-05:00",
+    "location": "C:\\work\\research\\OCR\\OcrTest\\lib\\jai_imageio.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "commons-logging-1.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "ba24d5de831911b684c92cd289ed5ff826271824",
+    "jarFileModificationDate": "2011-12-14T16:27:26-05:00",
+    "location": "C:\\work\\research\\OCR\\fileuploader\\src\\lib\\commons-logging-1.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c5c972916cdce58347238c0f4c2de85b4bd35dad",
+    "jarFileModificationDate": "2012-10-05T10:45:33.930-04:00",
+    "location": "C:\\devtool\\java\\jre6\\lib\\jsse.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "364305477daf9f20aebe6320ea9bed27e3542dda",
+    "jarFileModificationDate": "2012-10-05T10:45:34.292-04:00",
+    "location": "C:\\devtool\\java\\jre6\\lib\\charsets.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a7dd74f3c77d4a0524e59223b0fdef817c40da8e",
+    "jarFileModificationDate": "2012-10-05T10:45:32.290-04:00",
+    "location": "C:\\devtool\\java\\jre6\\lib\\resources.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "commons-io",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b90b6ac57cf27a2858eaa490d02ba7945d18ca7b",
+    "jarFileModificationDate": "2011-12-14T16:27:26-05:00",
+    "location": "C:\\work\\research\\OCR\\fileuploader\\src\\lib\\commons-io.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "64180d50796cb072486a767d23cce89f0ed5ee8b",
+    "jarFileModificationDate": "2012-10-05T10:45:34.324-04:00",
+    "location": "C:\\devtool\\java\\jre6\\lib\\ext\\localedata.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "servlet-api",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "1414ae8fe774df0cb217928b6634ee936f134c91",
+    "jarFileModificationDate": "2011-12-14T16:27:18-05:00",
+    "location": "C:\\work\\research\\OCR\\fileuploader\\src\\lib-no-dist\\servlet-api.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "41248d0a75a3dd34f49303907970442db0e26f97",
+    "jarFileModificationDate": "2012-10-05T10:45:32.262-04:00",
+    "location": "C:\\devtool\\java\\jre6\\lib\\ext\\dnsns.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "ed89eb92e4c3b5595c8f60570b850941e0cca7e5",
+    "jarFileModificationDate": "2012-10-05T10:45:33.835-04:00",
+    "location": "C:\\devtool\\java\\jre6\\lib\\rt.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "commons-lang-2.3",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "0eecdac8c86bc84b4bdfc24371ba8c785a1fc552",
+    "jarFileModificationDate": "2011-12-14T16:27:26-05:00",
+    "location": "C:\\work\\research\\OCR\\fileuploader\\src\\lib\\commons-lang-2.3.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "junit-4.10",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "e4f1766ce7404a08f45d859fb9c226fc9e41a861",
+    "jarFileModificationDate": "2014-03-08T21:21:24.191-05:00",
+    "location": "C:\\work\\research\\OCR\\OcrTest\\lib\\junit-4.10.jar",
+    "javaRuntime": false
+  }
+]

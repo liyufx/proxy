@@ -1,0 +1,9 @@
+<list>
+<!-- To add new tms configurations, copy and edit the following sample entry 
+  <tms-config>
+    <configName>Test</configName>
+    <tmsServer>https://inteltms.sdlproducts.com</tmsServer>
+    <configGUID>26191711-F347-40DA-918C-D6D0F3D5D979</configGUID>
+  </tms-config>
+ -->
+</list>

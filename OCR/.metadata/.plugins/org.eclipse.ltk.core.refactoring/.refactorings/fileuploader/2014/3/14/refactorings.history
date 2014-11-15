@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;private void cleanup(Connection conn, Statement stmt, ResultSet rs)&apos; from &apos;db.DbAccess.doGet()&apos; to &apos;db.DbAccess&apos;&#x0D;&#x0A;- Original project: &apos;fileuploader&apos;&#x0D;&#x0A;- Method name: &apos;cleanup&apos;&#x0D;&#x0A;- Destination type: &apos;db.DbAccess&apos;&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" comments="false" description="Extract method &apos;cleanup&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src\/java&lt;db{DbAccess.java" name="cleanup" replace="false" selection="2222 409" stamp="1396243307079" version="1.0" visibility="2"/>
+</session>

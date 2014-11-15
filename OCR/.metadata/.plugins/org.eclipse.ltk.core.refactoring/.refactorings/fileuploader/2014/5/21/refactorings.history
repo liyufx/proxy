@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;weibo.WeiboAccountsServlet.reportProxyStatus(...)&apos; to &apos;proxy.ProxyServlet&apos;&#x0D;&#x0A;- Original project: &apos;fileuploader&apos;&#x0D;&#x0A;- Original element: &apos;weibo.WeiboAccountsServlet.reportProxyStatus(...)&apos;&#x0D;&#x0A;- Destination type: &apos;proxy.ProxyServlet&apos;" delegate="false" deprecate="true" description="Move member &apos;reportProxyStatus&apos;" element1="/src\/java&lt;weibo{WeiboAccountsServlet.java[WeiboAccountsServlet~reportProxyStatus~QString;~Z" flags="589830" id="org.eclipse.jdt.ui.move.static" input="/src\/java&lt;proxy{ProxyServlet.java[ProxyServlet" stamp="1400560053430" version="1.0"/>
+</session>

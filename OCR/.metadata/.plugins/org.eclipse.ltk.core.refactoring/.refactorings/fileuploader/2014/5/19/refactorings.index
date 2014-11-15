@@ -1,0 +1,3 @@
+1399498236924	Extract method 'reset'
+1399569139734	Move member 'writeBlockerStats'
+1399569188502	Rename method 'writeStatus'

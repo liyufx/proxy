@@ -1,0 +1,106 @@
+Intel TMS File Uploader (1.0.0)
+Installation and Configuration Guide
+
+====
+1. Package content
+
+The Intel TMS File Uploader package contains two files:
+
+. tmsuploader.war - the web application file to deploy
+. install.txt - this guide. The same file can also be found under the 
+META-INF directory inside the tmsuploader.war
+
+====
+2. Deployment
+
+tmsuploader.war is a standard Web Application Archive (WAR) which can be 
+deployed on any J2EE container, such as Apache Tomcat, JBoss, WebLogic, and
+so on. Follow your container's standard procedure to deploy web application.
+
+Once deployed, the application should be available at 
+http://yourserver:yourport/tmsuploader. 
+
+====
+3. Home directory
+
+Intel TMS File Uploader will create a home directory for itself on the local 
+disk on the J2EE container that hosts it. The directory will be created the 
+first time the tool is accessed. It will write the two configuration files 
+mentioned below; in addition, it will unzip the uploaded ZIP file in tmp 
+directory under the home directory, and delete them once the files are 
+submitted to TMS.
+
+By default the home directory is a sub-directory named "tmsuploader" under 
+the home directory of the user who runs J2EE container hosting the tool. 
+Chances are the J2EE container is running as a system service and the user
+running it may not be the user who administer the tool. To find out where
+the tool's home directory is, you can use the following URL:
+
+http://yourserver:yourport/tmsuploader/uploader?showHomeDir=true
+
+The tool will show the normal uploader page, with an extra line under the
+title, showing the location of the home directory.
+ 
+The default home directory may not be the right place you need it to be. 
+You can reconfigure the tool to choose a different home directory. You need
+to change the WEB-INF/web.xml in the tmsuploader.war file, look for the 
+following line:
+
+	    <param-name>tmsUploaderHome</param-name>
+
+change the next line, put the path to the home directory you choose
+
+		<param-value>path-to-home-dir</param-value>
+
+It is recommended that you put an absolute path in there. If you put in a 
+relative path, it will again be relative to the home directory of the user 
+who runs J2EE container hosting the tool. 
+ 
+You can make the change to the war file before deploying it. In which case
+you will unzip the war file, make the change, zip it back into a war file, 
+then deploy it. Or depending on the J2EE container, you may be able to make 
+the change after it is deployed. Some containers (such as Tomcat) will unzip 
+the war file after it is deployed, you can go into the unzipped directory,
+make changes to the web.xml there. For some containers (such as Tomcat) the
+change will take effect automatically. Other containers may require you to
+restart the app or the container itself for the change to take effect.
+
+====
+4. Configuration files
+
+Intel TMS File Uploader has two XML configuration files, both of them can be 
+found under the home directory mentioned above. Both files can be edited by 
+any text or XML editors and save back to disk. Once saved they will take 
+effect the next time the tool processes a file upload request. It is not 
+necessary to restart the tool or the hosting J2EE container for the changes 
+to apply.  
+
+
+* langs.xml - the language mapping file, which maps the language code found in
+the ZIP files to upload to TMS language code. langs.xml is shipped with all 
+known RFC4646 and TeamSite mapping built-in. Typically there is no need to 
+make changes to this file. However, you can edit it to add/change/remove
+language mapping. Each mapping entry is defined as
+
+  <entry><string>ZIP-lang-code</string><string>TMS-lang-code</string></entry>
+  
+where the "ZIP-lang-code" is the language code found in the ZIP file's 
+directory structure, while the TMS-lang-code is the language code in TMS that
+it maps to. The TMS-lang-code can define a source-target language pair,
+separated by a '>', such as "EN-US > ZH-CN", or it can just define a target
+language code, such as "ZH-CN"; in latter case, the source language is assumed
+to be "EN-US".
+
+* tmsconfigs.xml - defines the TMS configurations that the uploaded file can be
+submitted to. This file is shipped empty, with only a template entry in the 
+comment. You will have to edit it to fill in your TMS configuration, typically
+by copying the template and change the fields. Each entry is defined as:
+
+  <tms-config>
+    <configName>YourTmsConfigurationName</configName>
+    <tmsServer>YourTmsServerURL</tmsServer>
+    <configGUID>YourTmsConfigurationGUID</configGUID>
+  </tms-config>
+ 
+You can have many TMS configurations defined in this file.  
+

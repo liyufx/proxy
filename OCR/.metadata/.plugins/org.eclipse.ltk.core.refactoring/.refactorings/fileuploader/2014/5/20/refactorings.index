@@ -1,0 +1,3 @@
+1399912955672	Rename type 'Proxy'
+1399914758615	Rename local variable 'mamangedProxy'
+1399914849377	Extract method 'reportProxyStatus'
