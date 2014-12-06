@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+	    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	    version="2.4">
+    <display-name>Proxy Task Manager</display-name>
+    
+	<servlet>
+	    <servlet-name>FileUploadServlet</servlet-name>
+	    <servlet-class>fileuploader.FileUploadServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+	    <servlet-name>ProxyServlet</servlet-name>
+	    <servlet-class>proxy.ProxyServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+	    <servlet-name>ProxyApiServlet</servlet-name>
+	    <servlet-class>proxy.ProxyApiServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+	    <servlet-name>WeiboAccountsServlet</servlet-name>
+	    <servlet-class>weibo.WeiboAccountsServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+	    <servlet-name>WeiboTaskServlet</servlet-name>
+	    <servlet-class>weibo.WeiboTaskServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+	    <servlet-name>WeiboResourcesServlet</servlet-name>
+	    <servlet-class>weibo.WeiboResourcesServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+	    <servlet-name>ScriptServlet</servlet-name>
+	    <servlet-class>script.ScriptServlet</servlet-class>
+	</servlet>
+<!-- 	
+ 	<servlet-mapping>
+	  <servlet-name>FileUploadServlet</servlet-name>
+	  <url-pattern>/upload</url-pattern>
+	</servlet-mapping>
+ -->
+ 
+ 	<servlet-mapping>
+	  <servlet-name>ProxyServlet</servlet-name>
+	  <url-pattern>/proxies</url-pattern>
+	</servlet-mapping>
+	
+ 	<servlet-mapping>
+	  <servlet-name>ProxyApiServlet</servlet-name>
+	  <url-pattern>/proxyapi</url-pattern>
+	</servlet-mapping>
+	
+ 	<servlet-mapping>
+	  <servlet-name>WeiboAccountsServlet</servlet-name>
+	  <url-pattern>/weibo</url-pattern>
+	</servlet-mapping>
+	
+ 	<servlet-mapping>
+	  <servlet-name>ScriptServlet</servlet-name>
+	  <url-pattern>/scripts</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+ 		<welcome-file> index.html </welcome-file>
+	</welcome-file-list>
+</web-app>
+
