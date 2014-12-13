@@ -36,3 +36,8 @@
 /OCR/OcrTest/bin
 /OCR/Tess4J/build
 /OCR/Tess4J/dist
+/ProxyManager/src/resources/.svn
+/ProxyManager/src/java/.svn
+/ProxyManager/src/dist/.svn
+/ProxyManager/src/lib/.svn
+/ProxyManager/src/lib-no-dist/.svn

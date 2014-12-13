@@ -118,6 +118,32 @@ public class ProxyServlet extends HttpServlet {
 		}
 
 		try {
+			File proxyHome = new File(Home.getTomcatHome(), "proxies");
+			
+			File proxyFiles[] = proxyHome.listFiles(new FilenameFilter() {
+				@Override
+				public boolean accept(File file, String name) {
+					return name.toLowerCase().matches(".*-proxy\\.txt");
+				}
+			});
+
+			for (File file : proxyFiles) {
+				Set<String> ips = new HashSet<String>();
+				FileInputStream fis = null;
+				try {
+					fis = new FileInputStream(file);
+					readProxies(ips, fis);
+					
+					sProxies.put(file.getName().split("-")[0] + ":", new ArrayList<String>(ips));
+				} finally {
+					IOUtils.closeQuietly(fis);
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		try {
 			loadRawProxies();
 			loadRealtimeProxies();
 			Thread t = new Thread(new Runnable() {
@@ -201,6 +227,27 @@ public class ProxyServlet extends HttpServlet {
 		} finally {
 			DbAccess.cleanup(conn, stmt, rs);
 		}
+		
+		try {
+			File file = new File(new File(Home.getTomcatHome(), "proxies"),
+					site + "-proxy.txt");
+			
+			if (file.isFile()) {
+				Set<String> ips = new HashSet<String>();
+				FileInputStream fis = null;
+				try {
+					fis = new FileInputStream(file);
+					readProxies(ips, fis);
+					
+					sProxies.put(site + ":", new ArrayList<String>(ips));
+				} finally {
+					IOUtils.closeQuietly(fis);
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 		return count;
 	}
 	
@@ -523,47 +570,55 @@ public class ProxyServlet extends HttpServlet {
 
 	private void writeStats(String site, String zone, PrintWriter out) {
 		List<String> proxies;
-		if (site.equalsIgnoreCase("raw")) {
-			proxies = Arrays.asList(sRawProxies.get());
-		} else {
-			proxies = getProxies(site, zone);
-		}
-		
-		if (proxies==null) {
-			out.println("null");
+		if (StringUtils.isEmpty(site)) {
+			for (String key : sProxies.keySet()) {
+				out.println(key + ": " + sProxies.get(key).size());
+			}
+			out.println("----");
+			out.println("raw: " + sRawProxies.get().length);
 		} else {
 			if (site.equalsIgnoreCase("raw")) {
-				out.println("Total raw proxies: " + proxies.size());
+				proxies = Arrays.asList(sRawProxies.get());
 			} else {
-				out.println("Total raw proxies: " + sRawProxies.get().length);
-				out.print("Temporarily blocked proxies: ");
-				Util.writeBlockerStats(out, tempProxyBlocker);
-				
-				if (site.equalsIgnoreCase("yaris")) {
-					out.println("Total realtime proxies: " + sRealtimeProxies.get().length);
-					out.print("Blocked realtime proxies: ");
-					Util.writeBlockerStats(out, getRealtimeSiteBlocker(site));
-					out.print("Site realtime access (failure/total): ");
-					writeAccessStats(out, siteRealtimeAccessCounters.get(site), siteRealtimeAccessFailureCounters.get(site));
-				}
-				
-				out.println("Stat for site: " + site + " (zone: " + zone + ")");
-				out.println("Total proxies: " + proxies.size());
-				Blocker blocker = getSiteBlocker(site);
-				
-				
-				if (blocker==null) {
-					out.println("No blockers");
+				proxies = getProxies(site, zone);
+			}
+			
+			if (proxies==null) {
+				out.println("Not proxy found for " + site + ":" + zone);
+			} else {
+				if (site.equalsIgnoreCase("raw")) {
+					out.println("Total raw proxies: " + proxies.size());
 				} else {
-					out.print("Total blocked : ");
-					Util.writeBlockerStats(out, blocker);
-				}
-				out.print("Site access (failure/total): ");
-				writeAccessStats(out, siteAccessCounters.get(site), siteAccessFailureCounters.get(site));
-				
-				if (site.equalsIgnoreCase("weibo")) {
-					out.print("Long term blocked : ");
-					Util.writeBlockerStats(out, weiboLongBlocker);
+					out.println("Total raw proxies: " + sRawProxies.get().length);
+					out.print("Temporarily blocked proxies: ");
+					Util.writeBlockerStats(out, tempProxyBlocker);
+					
+					if (site.equalsIgnoreCase("yaris")) {
+						out.println("Total realtime proxies: " + sRealtimeProxies.get().length);
+						out.print("Blocked realtime proxies: ");
+						Util.writeBlockerStats(out, getRealtimeSiteBlocker(site));
+						out.print("Site realtime access (failure/total): ");
+						writeAccessStats(out, siteRealtimeAccessCounters.get(site), siteRealtimeAccessFailureCounters.get(site));
+					}
+					
+					out.println("Stat for site: " + site + " (zone: " + zone + ")");
+					out.println("Total proxies: " + proxies.size());
+					Blocker blocker = getSiteBlocker(site);
+					
+					
+					if (blocker==null) {
+						out.println("No blockers");
+					} else {
+						out.print("Total blocked : ");
+						Util.writeBlockerStats(out, blocker);
+					}
+					out.print("Site access (failure/total): ");
+					writeAccessStats(out, siteAccessCounters.get(site), siteAccessFailureCounters.get(site));
+					
+					if (site.equalsIgnoreCase("weibo")) {
+						out.print("Long term blocked : ");
+						Util.writeBlockerStats(out, weiboLongBlocker);
+					}
 				}
 			}
 		}
